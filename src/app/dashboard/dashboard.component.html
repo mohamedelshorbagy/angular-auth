@@ -1,0 +1,10 @@
+<ul class="list-group" *ngIf="data">
+  <ng-template [ngIf]="data.flag">
+  <li class="list-group-item">{{data.email}}</li>
+  <li class="list-group-item">{{data.password}}</li>
+  </ng-template>
+  <ng-template [ngIf]="!data.flag">
+    <div class="alert alert-danger">{{data.msg}}</div>
+  </ng-template>
+  
+</ul>

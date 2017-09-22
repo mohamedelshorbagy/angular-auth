@@ -1,0 +1,16 @@
+<ul class="list-group" *ngIf="user">
+  <li class="list-group-item">{{user.id}}</li>
+  <li class="list-group-item">{{user.title}}</li>
+  <li class="list-group-item">{{user.body}}</li>
+</ul>
+
+
+<a [routerLink]="['/about' , 5]">Load user (5)</a>
+
+
+<div *ngIf="data">
+  <li>{{data.name}}</li>
+  <li>{{data.age}}</li>
+
+
+</div>

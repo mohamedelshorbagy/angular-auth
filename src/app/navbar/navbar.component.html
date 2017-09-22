@@ -1,0 +1,13 @@
+<div class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <li *ngIf="!all.isLoggedIn()" routerLinkActive="active current"><a routerLink="/signup">Sign Up</a></li>
+    <li *ngIf="!all.isLoggedIn()" routerLinkActive="active current"><a routerLink="/signin">Sign In</a></li>
+    <li *ngIf="all.isLoggedIn()" routerLinkActive="active current"><a routerLink="/dashboard">Dashboard</a></li>
+    <li *ngIf="all.isLoggedIn()" routerLinkActive="active current"><a class="logout" (click)="all.logOut()">Logout</a></li>
+    
+    
+  </ul>
+</div>

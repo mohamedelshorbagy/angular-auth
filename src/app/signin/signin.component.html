@@ -1,0 +1,16 @@
+<form class="form-group" (ngSubmit)="login(f)" #f="ngForm">
+  <input class="form-control" name="email" placeholder="Username"
+   ngModel
+   type="text"
+   required
+   #email="ngModel"
+  />
+  <input class="form-control" name="password" placeholder="Password" 
+  ngModel 
+  type="password" 
+  required
+  #pass="ngModel"
+  />
+  <input class="btn btn-primary" name="submit" value="Sign In" type="submit" [disabled]="!f.valid"/>
+
+</form>
